@@ -1175,7 +1175,7 @@ static blk_qc_t cached_dev_make_request(struct request_queue *q,
 	}
 
 	generic_start_io_acct(q,
-			      bio_op(bio),
+			      bio_data_dir(bio),
 			      bio_sectors(bio),
 			      &d->disk->part0);
 
